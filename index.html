@@ -2,37 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mis Proyectos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis proyectos</title>
   <style>
-    nav {
-      background-color: #333;
-      padding: 10px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+    /* Estilo para que parezcan pestañas pero sean enlaces reales */
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 16px;
       margin-right: 5px;
-      display: inline-block;
+      border-radius: 5px 5px 0 0;
+      text-decoration: none;
+      color: #333;
     }
-    nav a:hover {
-      background-color: #555;
+    .tab-button:hover {
+      background-color: #ddd;
+    }
+    /* Clase para indicar en qué pestaña estás */
+    .tab-button.active {
+      background-color: #007bff;
+      color: white;
+    }
+    .tab-content {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navegación entre proyectos -->
-  <nav>
-    <a href="index.html">Mis proyectos</a>
-    <a href="Guia 1/Santa Rosa - Támara/index.html">Guía 1</a>
-    <a href="Guia 2/santa-rosa-támara/index.html">Guía 2</a>
-  </nav>
+  <!-- Pestañas que redirigen a los archivos reales -->
+  <div class="tabs">
+    <a href="index.html" class="tab-button active">Mis proyectos</a>
+    <a href="Guia 1/Santa Rosa - Támara/index.html" class="tab-button">Guía 1</a>
+    <a href="Guia 2/santa-rosa-támara/index.html" class="tab-button">Guía 2</a>
+  </div>
 
-  <main>
-    <h1>Página Principal - Mis Proyectos</h1>
-    <p>Selecciona una de las guías del menú superior para ver su contenido.</p>
-  </main>
+  <!-- Contenido de la página principal -->
+  <div class="tab-content">
+    <h2>Mis Proyectos</h2>
+    <p>Bienvenido a la página principal. Selecciona una guía arriba para ver su contenido completo.</p>
+  </div>
 
 </body>
 </html>
