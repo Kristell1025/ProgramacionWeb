@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Proyectos y Guías</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
 
+    /* Estilos del menú de pestañas */
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 5px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .tab-button:hover {
+      background-color: #ddd;
+    }
+
+    .tab-button.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Ocultar el contenido de las pestañas por defecto */
+    .tab-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 0 0 5px 5px;
+    }
+
+    /* Mostrar la pestaña activa */
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Estilo del botón regresar */
+    .btn-regresar {
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-regresar:hover {
+      background-color: #5a6268;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pestañas principales -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="mostrarPestana('proyectos', this)">Mis proyectos</button>
+    <button class="tab-button" onclick="mostrarPestana('guia1', this)">Guía 1</button>
+    <button class="tab-button" onclick="mostrarPestana('guia2', this)">Guía 2</button>
+  </div>
+
+  <!-- Contenido de Mis Proyectos -->
+  <div id="proyectos" class="tab-content active">
+    <h2>Mis Proyectos</h2>
+    <p>Bienvenido a la página principal de mis proyectos.</p>
+  </div>
+
+  <!-- Contenido de Guía 1 -->
+  <div id="guia1" class="tab-content">
+    <h2>Guía 1</h2>
+    <p>Contenido de la Guía 1 aquí...</p>
+    
+    <!-- Botón para regresar a Mis Proyectos -->
+    <button class="btn-regresar" onclick="irAProyectos()">Regresar a la página principal</button>
+  </div>
+
+  <!-- Contenido de Guía 2 -->
+  <div id="guia2" class="tab-content">
+    <h2>Guía 2</h2>
+    <p>Contenido de la Guía 2 aquí...</p>
+    
+    <!-- Botón para regresar a Mis Proyectos -->
+    <button class="btn-regresar" onclick="irAProyectos()">Regresar a la página principal</button>
+  </div>
+
+  <script>
+    // Función para cambiar entre pestañas
+    function mostrarPestana(idPestana, boton) {
+      // Ocultar todos los contenidos
+      const contenidos = document.querySelectorAll('.tab-content');
+      contenidos.forEach(c => c.classList.remove('active'));
+
+      // Desactivar todos los botones
+      const botones = document.querySelectorAll('.tab-button');
+      botones.forEach(b => b.classList.remove('active'));
+
+      // Activar la pestaña y el botón seleccionados
+      document.getElementById(idPestana).classList.add('active');
+      if (boton) {
+        boton.classList.add('active');
+      }
+    }
+
+    // Función para regresar a "Mis Proyectos"
+    function irAProyectos() {
+      // Busca el primer botón (Mis proyectos) y activa esa pestaña
+      const botonProyectos = document.querySelectorAll('.tab-button')[0];
+      mostrarPestana('proyectos', botonProyectos);
+    }
+  </script>
+
+</body>
+</html>
