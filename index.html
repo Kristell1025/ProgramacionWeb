@@ -3,58 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis proyectos</title>
+  <title>Mis Proyectos Web</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
     }
+
+    h1 {
+      color: #333;
+    }
+
     .tabs {
-      display: flex;
-      border-bottom: 2px solid #ccc;
+      display: inline-flex;
+      background-color: #ddd;
+      border-radius: 5px;
+      padding: 5px;
       margin-bottom: 20px;
     }
-    /* Estilo para que los enlaces parezcan pestañas */
+
     .tab-button {
       padding: 10px 20px;
       border: none;
-      background-color: #f1f1f1;
+      background-color: transparent;
       cursor: pointer;
       font-size: 16px;
-      margin-right: 5px;
-      border-radius: 5px 5px 0 0;
+      font-weight: bold;
       text-decoration: none;
-      color: #333;
+      color: #555;
+      border-radius: 4px;
     }
+
     .tab-button:hover {
-      background-color: #ddd;
+      background-color: #ccc;
     }
-    /* Pestaña activa */
+
     .tab-button.active {
       background-color: #007bff;
       color: white;
     }
+
     .tab-content {
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 0 0 5px 5px;
+      background-color: white;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .tab-content h2 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .tab-content p {
+      color: #666;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
 
-  <!-- Pestañas que conectan con tus carpetas reales en GitHub -->
+  <h1>Mis Proyectos Web</h1>
+  <p>Portafolio de prácticas del curso</p>
+
   <div class="tabs">
-    <a href="index.html" class="tab-button active">Mis proyectos</a>
+    <a href="index.html" class="tab-button active">Inicio</a>
     <a href="Guia 1/Santa Rosa - Támara/index.html" class="tab-button">Guía 1</a>
     <a href="Guia 2/santa-rosa-támara/index.html" class="tab-button">Guía 2</a>
     <a href="Guia 3/Santa-Rosa-Támara/index.html" class="tab-button">Guía 3</a>
   </div>
 
-  <!-- Contenido de tu página principal -->
   <div class="tab-content">
-    <h2>Mis Proyectos</h2>
-    <p>Bienvenido a mi página principal. Haz clic en las pestañas de arriba para navegar entre las guías.</p>
+    <h2>¡Bienvenida!</h2>
+    <p>Aquí puedes ver todas las guías y prácticas que voy subiendo. Haz clic en las pestañas de arriba para navegar de forma rápida y sencilla entre cada proyecto.</p>
   </div>
 
 </body>
