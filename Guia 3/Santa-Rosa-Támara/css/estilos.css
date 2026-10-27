@@ -228,3 +228,6 @@ button {
   background: #FFFFFF;
   font-weight: bold;
 }
+header h1 {
+    color: #ffffff !important;
+}
