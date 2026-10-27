@@ -4,35 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panadería Santa Rosa - Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9A8FF;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contenedor {
+            max-width: 650px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #5c3a21;
+            margin-top: 0;
+            font-size: 28px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Botones bonitos pero sencillos */
+        .menu-botones {
+            margin: 30px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .boton {
+            background-color: #5c3a21;
+            color: white;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #7a4e2f;
+        }
+
+        .footer-texto {
+            font-size: 14px;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body bgcolor="#F9A8FF">
 
-    <!-- Encabezado simple -->
-    <header>
-        <h1 align="center">Panadería Santa Rosa</h1>
-        <p align="center"><b>Mis proyectos y guías del curso</b></p>
-    </header>
+    <div class="contenedor">
+        <h1>Panadería Santa Rosa</h1>
+        <p>¡Bienvenida al panel principal de tus prácticas! Haz clic en cualquiera de los botones para revisar el avance de cada guía:</p>
 
-    <!-- Enlaces sencillos tipo menú -->
-    <div align="center">
-        <a href="index.html">[ Inicio ]</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="Guia 1/Santa Rosa - Támara/index.html">[ Guía 1 ]</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="Guia 2/santa-rosa-támara/index.html">[ Guía 2 ]</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="Guia 3/Santa-Rosa-Támara/index.html">[ Guía 3 ]</a>
+        <!-- Botones de navegación organizados en lista -->
+        <div class="menu-botones">
+            <a href="Guia 1/Santa Rosa - Támara/index.html" class="boton">Ir a la Guía 1</a>
+            <a href="Guia 2/santa-rosa-támara/index.html" class="boton">Ir a la Guía 2 (Catálogo)</a>
+            <a href="Guia 3/Santa-Rosa-Támara/index.html" class="boton">Ir a la Guía 3 (Pedidos)</a>
+        </div>
+
+        <p class="footer-texto">Curso de Programación Web · Proyecto Familiar</p>
     </div>
-
-    <hr style="width: 50%; margin: 20px auto;">
-
-    <!-- Contenido básico -->
-    <main style="width: 60%; margin: 0 auto; background-color: white; padding: 20px; border-radius: 5px;">
-        <h2>¡Bienvenida!</h2>
-        <p>Haz clic en los enlaces de arriba para navegar por cada una de las guías de la panadería:</p>
-        <ul>
-            <li><strong>Guía 1:</strong> Estructura inicial.</li>
-            <li><strong>Guía 2:</strong> Catálogo de productos.</li>
-            <li><strong>Guía 3:</strong> Formulario de pedidos y validaciones.</li>
-        </ul>
-    </main>
 
 </body>
 </html>
